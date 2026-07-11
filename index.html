@@ -1,125 +1,200 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Amma's Kitchen</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amma's Kitchen</title>
 
 <style>
-body{
-font-family: Arial, sans-serif;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
 background:#fff8ef;
-color:#4b2e1e;
+color:#333;
 }
 
 header{
 background:#6b3e1e;
 color:white;
+padding:20px;
 text-align:center;
-padding:25px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.logo{
-font-size:32px;
+header h1{
+font-size:36px;
+}
+
+header p{
+margin-top:10px;
+}
+
+nav{
+margin-top:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(#fff8ef,#f6e6d5);
+}
+
+.hero h2{
+font-size:40px;
+color:#6b3e1e;
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+}
+
+.whatsapp-btn{
+display:inline-block;
+margin-top:30px;
+background:#25D366;
+color:white;
+padding:15px 30px;
+border-radius:50px;
+text-decoration:none;
+font-size:18px;
 font-weight:bold;
 }
 
 section{
-padding:20px;
+padding:50px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+color:#6b3e1e;
+margin-bottom:40px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
 background:white;
-margin:15px 0;
-padding:18px;
-border-radius:12px;
-box-shadow:0 2px 8px #ddd;
+border-radius:20px;
+padding:25px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+text-align:center;
+transition:.3s;
 }
 
-button{
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+color:#6b3e1e;
+margin-bottom:10px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#c0392b;
+margin:15px 0;
+}
+
+.order-btn{
+display:inline-block;
 background:#25D366;
 color:white;
-border:none;
-padding:12px 20px;
-border-radius:20px;
-font-size:16px;
-}
-
-footer{
-background:#6b3e1e;
-color:white;
-text-align:center;
-padding:15px;
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-<div class="logo">Amma's Kitchen</div>
-<p>Homemade Sweets, Snacks & Pickles</p>
+
+<h1>Amma's Kitchen</h1>
+
+<p>Homemade Pickles • Podulu • Snacks • Sweets</p>
+
+<nav>
+
+<a href="#pickles">Pickles</a>
+
+<a href="#podulu">Podulu</a>
+
+<a href="#snacks">Snacks</a>
+
+<a href="#sweets">Sweets</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
+<section class="hero">
 
-<section>
-<h2>Our Products</h2>
+<h2>Traditional Homemade Taste</h2>
+
+<p>Freshly prepared with premium ingredients.</p>
+
+<a class="whatsapp-btn" href="https://wa.me/918688012610?text=Hi%20Amma's%20Kitchen,%20I%20want%20to%20place%20an%20order.">
+
+Order on WhatsApp
+
+</a>
+
+</section>
+
+<section id="pickles">
+
+<h2 class="section-title">Pickles</h2>
+
+<div class="products">
 
 <div class="card">
+
 <h3>Chicken Pickle</h3>
-<p>Homemade authentic taste</p>
-<button>Order Now</button>
+
+<div class="price">₹1300 / kg</div>
+
+<a class="order-btn"
+href="https://wa.me/918688012610?text=I%20want%20Chicken%20Pickle">
+Order Now
+</a>
+
 </div>
 
 <div class="card">
-<h3>Mutton Pickle</h3>
-<p>Fresh homemade pickle</p>
-<button>Order Now</button>
+
+<h3>Chicken Boneless Pickle</h3>
+
+<div class="price">₹1550 / kg</div>
+
+<a class="order-btn"
+href="https://wa.me/918688012610?text=I%20want%20Chicken%20Boneless%20Pickle">
+Order Now
+</a>
+
 </div>
-
-<div class="card">
-<h3>Dry Fruits Laddu</h3>
-<p>Premium homemade sweet</p>
-<button>Order Now</button>
-</div>
-
-<div class="card">
-<h3>Murukulu</h3>
-<p>Crispy traditional snack</p>
-<button>Order Now</button>
-</div>
-
-</section>
-
-
-<section>
-<h2>About Us</h2>
-<p>
-Amma's Kitchen brings homemade sweets, snacks and pickles
-prepared with traditional recipes and quality ingredients.
-</p>
-</section>
-
-
-<section>
-<h2>Shipping & Terms</h2>
-<p>
-Orders are prepared fresh. Shipping details will be shared after order confirmation.
-</p>
-</section>
-
-
-<section>
-<h2>Contact</h2>
-<p>WhatsApp us for orders.</p>
-</section>
-
-
-<footer>
-© Amma's Kitchen
-</footer>
-
-</body>
-</html>
